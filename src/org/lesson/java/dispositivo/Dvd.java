@@ -1,6 +1,8 @@
 package org.lesson.java.dispositivo;
 
 public class Dvd implements Device{
+
+        // Metodi
         @Override
         public void play() {
             System.out.println("Sono un lettore DVD e sono in modalità play");

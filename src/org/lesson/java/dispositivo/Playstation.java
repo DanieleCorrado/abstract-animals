@@ -2,6 +2,7 @@ package org.lesson.java.dispositivo;
 
 public class Playstation implements Device{
 
+    // Metodi
     @Override
     public void play() {
         System.out.println("Sono una playstation e sono in modalità play");

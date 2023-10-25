@@ -14,16 +14,15 @@ public class Main {
         Creator creator = new Creator();
         Device dispositivo;
 
-    switch (tipoDispositivo) {
-        case "1", "2":
-            dispositivo = creator.create(tipoDispositivo);
-            dispositivo.play();
-            dispositivo.stop();
-            break;
-        default:
-            System.out.println("Scelta non valida!");
-            break;
-    }
-
+        switch (tipoDispositivo) {
+            case "1", "2":
+                dispositivo = creator.create(tipoDispositivo);
+                dispositivo.play();
+                dispositivo.stop();
+                break;
+            default:
+                System.out.println("Scelta non valida!");
+                break;
+        }
     }
 }
