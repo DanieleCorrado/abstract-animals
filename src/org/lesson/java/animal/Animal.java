@@ -1,6 +1,6 @@
-package org.lesson.java;
+package org.lesson.java.animal;
 
-public class Animal {
+public abstract class Animal {
 
     // Atributi
 
@@ -21,4 +21,14 @@ public class Animal {
     public void setName(String name) {
         this.name = name;
     }
+
+    public void sleep() {
+        System.out.println("Zzz");
+    }
+
+    public void eat(String food) {
+        System.out.println(this.name + " eat " + food);
+    }
+
+    public abstract void makeNoise();
 }
