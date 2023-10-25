@@ -13,9 +13,14 @@ public class Main {
 
         for (Animal animal : animals) {
             System.out.println(animal.getName());
-            animal.eat("something");
+            animal.eat();
             animal.makeNoise();
             animal.sleep();
+            if (animal instanceof CanFly) {
+                ((CanFly) animal).canFly();
+            } else if (animal instanceof CanSwim) {
+                ((CanSwim) animal).canSwim();
+            }
             System.out.println("-------------------");
         }
     }

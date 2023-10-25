@@ -26,9 +26,7 @@ public abstract class Animal {
         System.out.println("Zzz");
     }
 
-    public void eat(String food) {
-        System.out.println(this.name + " eat " + food);
-    }
+    public abstract void eat();
 
     public abstract void makeNoise();
 }
