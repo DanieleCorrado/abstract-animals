@@ -4,24 +4,34 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Animal[] animals = {
-                new Dog("Argan"),
-                new Dolphine("Flipper"),
-                new Eagle("Ben"),
-                new Sparrow("Jack")
+        Animale[] animales = {
+                new Cane("Argan"),
+                new Delfino("Flipper"),
+                new Aquila("Ben"),
+                new Passerotto("Jack")
         };
 
-        for (Animal animal : animals) {
-            System.out.println(animal.getName());
-            animal.eat();
-            animal.makeNoise();
-            animal.sleep();
-            if (animal instanceof CanFly) {
-                ((CanFly) animal).canFly();
-            } else if (animal instanceof CanSwim) {
-                ((CanSwim) animal).canSwim();
+        for (Animale animale : animales) {
+            System.out.println(animale.getName());
+            animale.mangia();
+            animale.verso();
+            animale.dormi();
+            if (animale instanceof Vola) {
+                faiVolare((Vola) animale);
+            }
+            else if (animale instanceof Nuota) {
+                faiNuotare((Nuota) animale);
             }
             System.out.println("-------------------");
         }
+
+    }
+
+    public static void faiVolare(Vola animal){
+        animal.vola();
+    }
+
+    public static void faiNuotare(Nuota animal) {
+        animal.nuota();
     }
 }
